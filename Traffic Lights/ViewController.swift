@@ -8,6 +8,7 @@
 import UIKit
 
 final class ViewController: UIViewController {
+    
     @IBOutlet var redLight: UIView!
     @IBOutlet var yellowLight: UIView!
     @IBOutlet var greenLight: UIView!
@@ -29,9 +30,9 @@ final class ViewController: UIViewController {
         yellowLight.alpha = 0.3
         greenLight.alpha = 0.3
         
-        redLight.layer.cornerRadius = redLight.frame.size.width / 2
-        yellowLight.layer.cornerRadius = yellowLight.frame.size.width / 2
-        greenLight.layer.cornerRadius = greenLight.frame.size.width / 2
+        redLight.layer.cornerRadius = redLight.frame.width / 2
+        yellowLight.layer.cornerRadius = yellowLight.frame.width / 2
+        greenLight.layer.cornerRadius = greenLight.frame.width / 2
     }
     
   
