@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,29 +13,31 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Traffic_Lights" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="roe-jQ-dpl">
-                                <rect key="frame" x="146" y="104" width="101" height="383"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="roe-jQ-dpl">
+                                <rect key="frame" x="146" y="107" width="148" height="484"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZB-aq-A1i">
-                                        <rect key="frame" x="0.0" y="0.0" width="101" height="102.33333333333333"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZB-aq-A1i">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="136"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pnN-VW-PR6">
-                                        <rect key="frame" x="0.0" y="140.33333333333334" width="101" height="102.33333333333334"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pnN-VW-PR6">
+                                        <rect key="frame" x="0.0" y="174" width="148" height="136"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSs-2i-ORX">
-                                        <rect key="frame" x="0.0" y="280.66666666666669" width="101" height="102.33333333333331"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSs-2i-ORX">
+                                        <rect key="frame" x="0.0" y="348" width="148" height="136"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3N-Tp-fP0">
-                                <rect key="frame" x="138" y="680" width="117" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3N-Tp-fP0">
+                                <rect key="frame" x="138" y="784" width="164" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="Zlh-2o-muR"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="START">
                                     <backgroundConfiguration key="background">
@@ -45,25 +47,27 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6kW-Cc-sM8"/>
-                                    <action selector="startButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ic0-Te-T43"/>
-                                    <action selector="switchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QxB-1q-BXD"/>
+                                    <action selector="lightButtonSwitcher" destination="BYZ-38-t0r" eventType="touchUpInside" id="6OZ-7E-phS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="roe-jQ-dpl" secondAttribute="bottom" constant="365" id="7Ka-EG-x91"/>
+                            <constraint firstItem="M3N-Tp-fP0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8u2-zQ-UIQ"/>
                             <constraint firstItem="roe-jQ-dpl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="AHa-4z-yrh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M3N-Tp-fP0" secondAttribute="bottom" constant="87" id="Xop-dN-7bI"/>
+                            <constraint firstItem="M3N-Tp-fP0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="138" id="cOz-LZ-BF2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="roe-jQ-dpl" secondAttribute="trailing" constant="146" id="co6-kx-zN8"/>
                             <constraint firstItem="roe-jQ-dpl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="hWk-N6-A41"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenLight" destination="wSs-2i-ORX" id="iIW-OJ-e17"/>
-                        <outlet property="redLight" destination="kZB-aq-A1i" id="rnC-iw-n9F"/>
-                        <outlet property="startButton" destination="M3N-Tp-fP0" id="NyF-z9-7Yp"/>
-                        <outlet property="yellowLight" destination="pnN-VW-PR6" id="5J7-8F-J6M"/>
+                        <outlet property="greenLight" destination="wSs-2i-ORX" id="328-Cy-3nl"/>
+                        <outlet property="redLight" destination="kZB-aq-A1i" id="D2g-5X-4Yn"/>
+                        <outlet property="startButton" destination="M3N-Tp-fP0" id="TWn-eo-3Y1"/>
+                        <outlet property="yellowLight" destination="pnN-VW-PR6" id="KuQ-GJ-KMt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
