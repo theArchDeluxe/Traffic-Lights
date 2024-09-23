@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 final class ViewController: UIViewController {
     @IBOutlet var redLight: UIView!
     @IBOutlet var yellowLight: UIView!
@@ -54,7 +55,7 @@ final class ViewController: UIViewController {
         }
     }
 }
-
+//MARK: - CurrentLight
 extension ViewController {
     private enum CurrentLight {
         case red, yellow, green
